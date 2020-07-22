@@ -31,7 +31,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginButton"> <!-- data-toggle="modal" data-target="#loginModal" deshabilitados, para poder usar funciones en jquery -->
                     <span class="fa fa-sign-in"></span> Login</a>
                 </span>    
             </div>     
@@ -85,7 +85,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="modal" data-target="#reserveModal">Reserve Table</a>
+                    <a role="button" id="reserveButton" class="btn btn-block nav-link btn-warning">Reserve Table</a> <!-- data-toggle="modal" data-target="#reserveModal" deshabilitados, para poder usar funciones en jquery -->
                 </div>
             </div>
         </div>
@@ -299,6 +299,14 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function(){
+            $("#loginButton").click(function(){
+                $('#loginModal').modal('show');
+            });
+
+            $("#reserveButton").click(function(){
+                $('#reserveModal').modal('show');
+            });
+            
             $("#mycarousel").carousel({ interval: 2000 });
             $("#carouselButton").click(function(){
                 if ($("#carouselButton").children("span").hasClass('fa-pause')) {
