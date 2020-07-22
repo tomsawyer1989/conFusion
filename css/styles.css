@@ -1,14 +1,23 @@
-.modal-header {
+#loginModal .modal-header {
   background: #512DA8;
-  color: #fffaf0; }
+  color: floralwhite; }
+  #loginModal .modal-header .close {
+    color: floralwhite; }
+  #loginModal .modal-header .close:hover {
+    color: floralwhite; }
 
-.close {
-  color: #fffaf0; }
+#loginModal .modal-body {
+  background: #D1C4E9; }
 
-.close:hover {
-  color: #fffaf0; }
+#reserveModal .modal-header {
+  background: #512DA8;
+  color: floralwhite; }
+  #reserveModal .modal-header .close {
+    color: floralwhite; }
+  #reserveModal .modal-header .close:hover {
+    color: floralwhite; }
 
-.modal-body {
+#reserveModal .modal-body {
   background: #D1C4E9; }
 
 .row-header {
